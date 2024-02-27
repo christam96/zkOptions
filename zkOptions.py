@@ -17,7 +17,7 @@ def exercise_options():
     stock_symbol = request.form['stock_symbol']
     quantity = int(request.form['quantity'])
 
-    # Verify identity (you may implement a more robust verification process)
+    # Verify identity 
     if not verify_identity(employee_name, employee_id):
         return render_template('identity_verification_failed.html', employee_name=employee_name)
 
@@ -33,8 +33,6 @@ def exercise_options():
     # Store the exercise request
     exercise_requests.append(request_data)
 
-    # return render_template('exercise_confirmation.html', request_data=request_data)
-
     # Request authorization from the company
     authorization_status = request_company_authorization(request_data)
 
@@ -47,7 +45,6 @@ def company_authorization():
 @app.route('/authorize_request/<int:request_index>')
 def authorize_request(request_index):
     # Placeholder for actual company authorization logic
-    # For example, you might update the status in a database or contact relevant personnel
     exercise_requests[request_index]['status'] = 'Approved'
 
     # Retrieve exercise request data
@@ -72,8 +69,6 @@ def verify_identity(employee_name, employee_id):
 
 def request_company_authorization(request_data):
     # Placeholder for company authorization logic
-    # You can implement your own logic to request and check authorization
-    # For example, you might check with an internal system or contact relevant personnel
     return True  # Placeholder, assuming authorization is always granted
 
 if __name__ == '__main__':
