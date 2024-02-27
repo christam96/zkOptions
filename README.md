@@ -1,6 +1,7 @@
 # zkOptions
 
-zkOptions simulates the process of exercising stock options, involving employees submitting requests, company authorization, and providing a dashboard for employees to track their requests.
+zkOptions simplifies the process of exercising stock options, involving employees submitting requests, company authorization, and providing a dashboard for employees to track their requests.
+![zkOptions](https://github.com/christam96/zkOptions/assets/20301223/007565c1-5494-4bd1-8979-99dae4ae5a00)
 
 ## Requirements
 - Python
