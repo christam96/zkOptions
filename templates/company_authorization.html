@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Authorization</title>
+</head>
+<body>
+    <h1>Company Authorization</h1>
+    <ul>
+        {% for request_data in exercise_requests %}
+            {% if request_data.status == 'Pending' %}
+                <li>
+                    <strong>Employee Name:</strong> {{ request_data.employee_name }},
+                    <strong>Employee ID:</strong> {{ request_data.employee_id }},
+                    <strong>Stock Symbol:</strong> {{ request_data.stock_symbol }},
+                    <strong>Quantity:</strong> {{ request_data.quantity }}
+                    <br>
+                    <a href="{{ url_for('authorize_request', request_index=loop.index-1) }}">Approve</a>
+                    <a href="{{ url_for('deny_request', request_index=loop.index-1) }}">Deny</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</body>
+</html>
