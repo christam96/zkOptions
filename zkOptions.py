@@ -38,14 +38,10 @@ def exercise_options():
     # Request authorization from the company
     authorization_status = request_company_authorization(request_data)
 
-    if authorization_status:
-        return render_template('exercise_confirmation.html', request_data=request_data, authorized=True)
-    else:
-        return render_template('exercise_confirmation.html', request_data=request_data, authorized=False)
+    return render_template('exercise_confirmation.html', request_data=request_data, authorized=False)
 
 @app.route('/company_authorization')
 def company_authorization():
-    print(exercise_requests)
     return render_template('company_authorization.html', exercise_requests=exercise_requests)
 
 @app.route('/authorize_request/<int:request_index>')
@@ -53,7 +49,14 @@ def authorize_request(request_index):
     # Placeholder for actual company authorization logic
     # For example, you might update the status in a database or contact relevant personnel
     exercise_requests[request_index]['status'] = 'Approved'
-    return redirect(url_for('company_authorization'))
+
+    # Retrieve exercise request data
+    request_data = exercise_requests[request_index]
+
+    print(exercise_requests)
+
+    # Render the Treasury Direction form
+    return render_template('treasury_direction_form.html', **request_data)
 
 @app.route('/deny_request/<int:request_index>')
 def deny_request(request_index):

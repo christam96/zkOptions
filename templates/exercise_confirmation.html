@@ -1,3 +1,5 @@
+<!-- templates/exercise_confirmation.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +16,8 @@
         <li><strong>Employee ID:</strong> {{ request_data.employee_id }}</li>
         <li><strong>Stock Symbol:</strong> {{ request_data.stock_symbol }}</li>
         <li><strong>Quantity:</strong> {{ request_data.quantity }}</li>
+        <li><strong>Status:</strong> {{ request_data.status }}</li>
+        <!-- <li><strong>Status:</strong> {% if authorized %} Authorized {% else %} Pending {% endif %}</li> -->
     </ul>
     <!-- You can add more details or actions here as needed -->
 </body>
