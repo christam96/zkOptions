@@ -65,30 +65,30 @@ Quantity
 ## Page Overview
 **exercise_submission.html:**
 
-- Form submission page.
-- Employee provides details, initiates exercise options request.
+- Form submission page
+- Employee provides details, initiates exercise options request
 
 **exercise_confirmation.html:**
 
 - Confirmation page after form submission.
-- Displays employee's name, ID, stock symbol, quantity, and initial status ('Pending').
-- Redirects after successful submission; error message for issues.
+- Displays employee's name, ID, stock symbol, quantity, and initial status ('Pending')
+- Redirects after successful submission; error message for issues
 
 **company_authorization.html:**
 
-- Dashboard for company authorization.
-- Lists pending exercise options requests.
-- Company decides to authorize or deny each request.
+- Dashboard for company authorization
+- Lists pending exercise options requests
+- Company decides to authorize or deny each request
 
 **treasury_direction_form.html:**
 
-- Optional Treasury Direction form.
-- Generated upon company authorization.
-- Includes employee's name, ID, stock symbol, and quantity.
+- Treasury Direction form
+- Generated upon company authorization
+- Includes employee's name, ID, stock symbol, and quantity
 
 **employee_dashboard.html:**
 
-- Employee's dashboard.
-- Displays all exercise options requests.
-- Features a table with columns for stock symbol, quantity, and status.
+- Employee's dashboard
+- Displays all exercise options requests
+- Features a table with columns for stock symbol, quantity, and status
 
