@@ -64,32 +64,37 @@ Quantity
     - Employees can track the status of their requests on the dashboard. The status can be 'Pending' if awaiting company authorization or 'Approved' if the company has authorized the request.
 
 ## Page Overview
-**exercise_submission.html:**
+**http://127.0.0.1:5000/:**
 
 - Form submission page
 - Employee provides details, initiates exercise options request
+<img width="468" alt="Exercise Options Request" src="https://github.com/christam96/zkOptions/assets/20301223/c16b068d-7ae2-44f1-8394-053906a7b85f">
 
-**exercise_confirmation.html:**
+**exercise_options.html:**
 
 - Confirmation page after form submission.
 - Displays employee's name, ID, stock symbol, quantity, and initial status ('Pending')
 - Redirects after successful submission; error message for issues
+<img width="543" alt="Exercise Options Confirmation" src="https://github.com/christam96/zkOptions/assets/20301223/0850745c-7714-4772-97a0-a5a1e5ec5233">
 
 **company_authorization.html:**
 
 - Dashboard for company authorization
 - Lists pending exercise options requests
 - Company decides to authorize or deny each request
+<img width="616" alt="Company Authorization" src="https://github.com/christam96/zkOptions/assets/20301223/4799d39b-62e4-407d-b8a4-c7636e20a93f">
 
 **treasury_direction_form.html:**
 
 - Treasury Direction form
 - Generated upon company authorization
 - Includes employee's name, ID, stock symbol, and quantity
+<img width="440" alt="TD Form" src="https://github.com/christam96/zkOptions/assets/20301223/b285bd06-e9ba-40d9-9f14-474b7fc9ed7b">
 
 **employee_dashboard.html:**
 
-- Employee's dashboard
+- Employee's dashboard 
 - Displays all exercise options requests
 - Features a table with columns for stock symbol, quantity, and status
+<img width="412" alt="Request Dashboard" src="https://github.com/christam96/zkOptions/assets/20301223/cbd6cba3-5430-4fff-a113-b092168dce47">
 
