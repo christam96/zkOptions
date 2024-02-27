@@ -51,7 +51,7 @@ Quantity
     - For each request, the company can choose to authorize or deny the request using the provided links.
     - If authorized, the status of the request is updated to 'Approved'.
 
-7. Treasury Direction Form (Optional):
+7. Treasury Direction Form:
     - Upon company authorization, the application generates a Treasury Direction form using the treasury_direction_form.html template.
     - This form includes key details such as the employee's name, employee ID, stock symbol, and quantity.
 
