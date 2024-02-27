@@ -63,7 +63,7 @@ Quantity
 9. Track Request Status:
     - Employees can track the status of their requests on the dashboard. The status can be 'Pending' if awaiting company authorization or 'Approved' if the company has authorized the request.
 
-## Page Overview
+## App Walkthrough
 **http://127.0.0.1:5000/:**
 
 - Form submission page
