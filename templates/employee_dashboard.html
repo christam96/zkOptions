@@ -1,0 +1,32 @@
+<!-- templates/employee_dashboard.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard</title>
+</head>
+<body>
+    <h1>Employee Dashboard</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Stock Symbol</th>
+                <th>Quantity</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for request_data in exercise_requests %}
+                <tr>
+                    <td>{{ request_data.stock_symbol }}</td>
+                    <td>{{ request_data.quantity }}</td>
+                    <td>{{ request_data.status }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

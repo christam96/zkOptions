@@ -53,8 +53,6 @@ def authorize_request(request_index):
     # Retrieve exercise request data
     request_data = exercise_requests[request_index]
 
-    print(exercise_requests)
-
     # Render the Treasury Direction form
     return render_template('treasury_direction_form.html', **request_data)
 
@@ -63,6 +61,10 @@ def deny_request(request_index):
     # Placeholder for denying the request
     exercise_requests[request_index]['status'] = 'Denied'
     return redirect(url_for('company_authorization'))
+
+@app.route('/employee_dashboard')
+def employee_dashboard():
+    return render_template('employee_dashboard.html', exercise_requests=exercise_requests)
 
 def verify_identity(employee_name, employee_id):
     # Placeholder identity verification logic; replace with identity proof logic
